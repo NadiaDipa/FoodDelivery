@@ -21,11 +21,12 @@ const AddServices = () => {
             <h2 className="text-danger fw-bold text-center">Catering Order Form</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title", { required: true, maxLength: 50 })} placeholder="Enter Full Name" />
-                <input {...register("price", { required: true, maxLength: 50 })} placeholder="price" />
-                 {/* <input {...register("Email", { required: true, maxLength: 50 })} placeholder="Email" /> */}
+                <input {...register("price", { required: true, maxLength: 50 })} placeholder="Enter Food Price" />
+                {/* <input {...register("Email", { required: true, maxLength: 50 })} placeholder="Email" /> */}
                 {/* <input {...register("Today's Date", { required: true, maxLength: 100 })} placeholder="Today's Date" /> */}
                 {/* <input {...register("Order Due Date", { required: true, maxLength: 100 })} placeholder="Order Due Date" /> */}
-                <input {...register("desc", { required: true, maxLength: 100 })} placeholder="description" />
+                <input {...register("desc", { required: true, maxLength: 100 })} placeholder="Enter Your Location" />
+                <input {...register("desc", { required: true, maxLength: 100 })} placeholder="Enter Your Mobile Number" />
                 {/* <input type="price" {...register("price")} placeholder="Total Cost" /> */}
                 <input className="submit" type="submit" />
             </form>
