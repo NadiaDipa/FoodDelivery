@@ -28,7 +28,7 @@ const AddServices = () => {
                 <input {...register("desc", { required: true, maxLength: 100 })} placeholder="Enter Your Location" />
                 <input {...register("desc", { required: true, maxLength: 100 })} placeholder="Enter Your Mobile Number" />
                 {/* <input type="price" {...register("price")} placeholder="Total Cost" /> */}
-                <input className="submit" type="submit" />
+                <input className="submit bg-danger" type="submit" />
             </form>
         </div>
     );
