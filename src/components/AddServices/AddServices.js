@@ -24,8 +24,8 @@ const AddServices = () => {
                 <input {...register("price", { required: true, maxLength: 50 })} placeholder="Enter Food Price" />
                
                 
-                <input {...register("img", { required: true, maxLength: 1000 })} placeholder="Enter Your img url" />
-                <input {...register("desc", { required: true, maxLength: 100 })} placeholder="Enter Your Details" />
+                <input {...register("img", { required: true, maxLength: 5000 })} placeholder="Enter Your img url" />
+                <input {...register("desc", { required: true, maxLength: 1000 })} placeholder="Enter Your Details" />
                 
                 <input className="submit bg-danger" type="submit" />
             </form>

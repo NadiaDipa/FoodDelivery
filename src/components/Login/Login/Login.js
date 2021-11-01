@@ -2,6 +2,9 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useFirebase from '../../../hooks/useFirebase';
 
+
+
+
 const Login = () => {
    const { handleGoogleSignIn,error, setError } = useFirebase();
     const history = useHistory();
@@ -15,8 +18,8 @@ const Login = () => {
             })
     }
     return (
-        <div className="google-button">
-            <h1 className="mb-4 fs-3">Login Using <span className="text-primary">Google</span></h1>
+        <div className="google-button w-50 mt-5 px-5 py-5 mx-auto shadow bg-dark">
+            <h1 className="mb-4 fs-3 mt-2 text-danger">Login Using <span className="text-Warning">Google</span></h1>
             <button className="google-sign-in btn btn-outline-danger" onClick={signInUsingGoogle}><i class="fab fa-google fs-3 me-2 google-sign"></i> Google Login</button>
         </div>
     );

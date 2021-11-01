@@ -27,7 +27,7 @@ const ManageOrders = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center mb-5 mt-5">Manage all orders</h1>
+                <h1 className="text-center mb-5 mt-5 text-danger">Manage all orders</h1>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 container mx-auto mb-5">
                 {

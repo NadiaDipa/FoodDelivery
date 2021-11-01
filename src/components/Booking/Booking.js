@@ -32,7 +32,7 @@ const Booking = () => {
             <div>
                 <div className="text-center mt-5">
                     <div>
-                        <img src={services.img} alt="" />
+                        <img src={services?.img} alt="" />
                     </div>
                     <div>
                         <h4>{services.title}</h4>
@@ -40,19 +40,19 @@ const Booking = () => {
                     </div>
                 </div>
                 <div className="booking-container">
-                    <h2 className="text-center">Book Now</h2>
+                    <h2 className="text-center text-danger">Book Now</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("name", { required: true, maxLength: 1000 })} value={user.displayName} />
-                        <input {...register("email", { required: true, maxLength: 1000 } )} value={user.email} />
-                        <input {...register("title", { required: true, maxLength: 1000 })} value={services.name} />
-                        <input {...register("img", { required: true, maxLength: 1000 })} value={services.imgURL} />
+                        <input {...register("name", { required: true, maxLength: 1000 })} value={user.displayName} placeholder="Your Name"/>
+                        <input {...register("email", { required: true, maxLength: 1000 } )} value={user.email} placeholder="Your Email"/>
+                        <input {...register("title", { required: true, maxLength: 1000 })} value={services.name} placeholder="Your Location"/>
+                        {/* <input {...register("img", { required: true, maxLength: 1000 })} value={services.img} /> */}
 
                         {/* <input {...register("location", { required: true, maxLength: 100 })} placeholder="Where do you live?" /> */}
                         {/* <input {...register("job", { required: true, maxLength: 1000 })}
                             placeholder="What's your job?" /> */}
 
                         {/* <input {...register("date", { required: true, maxLength: 100 })} placeholder="Date" type="date" /> */}
-                        <input className="submit" type="submit" value="Confirm" />
+                        <input className="submit bg-danger" type="submit" value="Confirm" />
                     </form>
                 </div>
 

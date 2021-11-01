@@ -29,9 +29,9 @@ function App() {
             </Route>
 
             
-            <PrivateRoute path = "/booking/:serviceId" >
+            <Route path = "/booking/:serviceId" >
               <Booking></Booking>
-            </PrivateRoute>
+            </Route>
            
             {/* <Route path ="/home">
               <Home></Home>
@@ -40,12 +40,12 @@ function App() {
             <Route path="/services">
              <Services></Services>
             </Route>
-            <PrivateRoute path="/manage-orders">
+            <Route path="/manage-orders">
              <ManageOrders></ManageOrders>
-            </PrivateRoute>
-            <PrivateRoute path="/add-services">
+            </Route>
+            <Route path="/add-services">
               <AddServices></AddServices>
-            </PrivateRoute>
+            </Route>
             
           </Switch>
       </Router>

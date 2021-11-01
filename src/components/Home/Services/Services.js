@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Services.css';
 
 const Services = () => {
      const [services, setServices] = useState([]);
@@ -21,7 +22,7 @@ const Services = () => {
                     key={myservice._id}>
                    <div>
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 food-item">
                         <img className="img-fluid" src={myservice.img} class="card-img-top" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title">{myservice.title}</h5>
