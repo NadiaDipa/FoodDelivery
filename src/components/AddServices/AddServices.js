@@ -22,12 +22,11 @@ const AddServices = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title", { required: true, maxLength: 50 })} placeholder="Enter Full Name" />
                 <input {...register("price", { required: true, maxLength: 50 })} placeholder="Enter Food Price" />
-                {/* <input {...register("Email", { required: true, maxLength: 50 })} placeholder="Email" /> */}
-                {/* <input {...register("Today's Date", { required: true, maxLength: 100 })} placeholder="Today's Date" /> */}
-                {/* <input {...register("Order Due Date", { required: true, maxLength: 100 })} placeholder="Order Due Date" /> */}
-                <input {...register("desc", { required: true, maxLength: 100 })} placeholder="Enter Your Location" />
-                <input {...register("desc", { required: true, maxLength: 100 })} placeholder="Enter Your Mobile Number" />
-                {/* <input type="price" {...register("price")} placeholder="Total Cost" /> */}
+               
+                
+                <input {...register("img", { required: true, maxLength: 1000 })} placeholder="Enter Your img url" />
+                <input {...register("desc", { required: true, maxLength: 100 })} placeholder="Enter Your Details" />
+                
                 <input className="submit bg-danger" type="submit" />
             </form>
         </div>

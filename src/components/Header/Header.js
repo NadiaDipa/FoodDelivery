@@ -55,9 +55,11 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 import logo from "./../../logo.png";
 
 const Header = () => {
+    const { user, logOut } = useFirebase();
      return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fs-6 fw-bold">
@@ -97,21 +99,22 @@ const Header = () => {
                                     My Orders
                                 </NavLink>
                             </li>
-                            <li class="nav-item">
-                                <NavLink className = "link nav-link text-danger"
-                                    to="/services"
-                                >
-                                    Services
-                                </NavLink>
-                            </li>
+{/*                            
                             <li class="nav-item">
                                 <NavLink className = "link nav-link text-danger"
                                     to="/login"
                                 >
                                     Login
                                 </NavLink>
-                            </li>
+                            </li> */}
                         </ul>
+                        <form class="d-flex">
+                            <span className=" me-3 mt-2 text-light">{user?.displayName}</span>
+                            {/* <img className="photo-url" src={user.photoURL} alt="" /> */}
+                            {user?.displayName ?
+                                <button onClick={logOut} className="btn btn-outline-danger btn-sm fw-bold me-2">Logout</button> :
+                                <NavLink to="/login"><button className="btn btn-dark btn-sm fw-bold me-2">Login</button></NavLink>}
+                        </form>
                     </div>
                 </div>
             </nav>
