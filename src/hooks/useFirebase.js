@@ -8,16 +8,15 @@ initializeAuthentication();
 const useFirebase = () => {
     const [error, setError] = useState('');
     const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
     const handleGoogleSignIn = () => {
+        setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider)
         
-        .catch ( (error) => {
-            const errorMessage = error.message;
-            setError(errorMessage);
-        })
+        
     }
     useEffect(() => {
         onAuthStateChanged(auth, user => {
@@ -29,13 +28,32 @@ const useFirebase = () => {
             }
         });
     }, [])
+
+    //Sign Out
     const logOut = () => {
         signOut(auth)
-            .then(() => { })
+            .then((result) => {
+                setUser({})
+            })
     }
+
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, user => {
+            if (user) {
+                setUser(user)
+            } else {
+                setUser({})
+            }
+            setIsLoading(false)
+        }) 
+        return unsubscribe;
+    }, [auth]);
 
     return{
         handleGoogleSignIn,
+        setIsLoading,
+        isLoading,
         error,
         logOut,
         setError,

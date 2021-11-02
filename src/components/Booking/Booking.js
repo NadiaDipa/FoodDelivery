@@ -11,14 +11,16 @@ const Booking = () => {
     const { serviceId } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services${serviceId}`)
+        fetch(`https://obscure-harbor-04873.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setServices(data))
-    }, [])
-
+    }, [serviceId])
+console.log(services)
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/users', data)
+        data.order = services;
+        data.status = "pending";
+        axios.post('https://obscure-harbor-04873.herokuapp.com/users', data)
             .then(res => {
                 // console.log(res)
                 if (res.data.insertedId) {

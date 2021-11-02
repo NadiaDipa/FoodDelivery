@@ -6,7 +6,7 @@ import useFirebase from '../../../hooks/useFirebase';
 
 
 const Login = () => {
-   const { handleGoogleSignIn,error, setError } = useFirebase();
+   const { handleGoogleSignIn, error, setError , setIsLoading} = useFirebase();
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location.state?.from || '/home'
@@ -14,7 +14,13 @@ const Login = () => {
         handleGoogleSignIn()
             .then(result => {
                 history.push(redirect_url)
-                setError(error.message)
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage);
+            })
+            .finally(() => {
+                setIsLoading(false);
             })
     }
     return (
