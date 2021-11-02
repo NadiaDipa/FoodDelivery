@@ -24,7 +24,7 @@ const Header = () => {
                                     <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/signup">Sign Up</NavLink>
                                 </>) : (<>
                                     <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/manage-orders">Manage Orders</NavLink>
-                                    <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/add-service">Add Service</NavLink>
+                                    <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/add-services">Add Services</NavLink>
                                     <NavLink className="ms-4 me-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/my-orders">My Orders</NavLink>
                                     <NavDropdown title={<img className="user-photo" src={user.photoURL} alt="user" />} id="basic-nav-dropdown">
                                         <NavDropdown.Item to="">{user.displayName}</NavDropdown.Item>
