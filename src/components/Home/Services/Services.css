@@ -1,5 +1,11 @@
-.food-item img{
+.food-item img {
     width: 100%;
     height: 250px;
 }
-    
+
+.headline {
+    border-bottom: 2px solid goldenrod;
+    width: 50%;
+    text-align: center;
+
+}
