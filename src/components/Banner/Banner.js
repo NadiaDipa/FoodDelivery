@@ -14,7 +14,7 @@ const Banner = () => {
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img className="img-fluid" height="630px" width="100%" src ={imageFoodDelivery}
+                  <img className="img-fluid" height="550px" width="100%" src ={imageFoodDelivery}
                   class = "d-block w-100"
                 alt="..." />
                   <form class="d-flex">
@@ -23,7 +23,7 @@ const Banner = () => {
                   </form>
                   </div>
                   <div class="carousel-item">
-                    <img className="img-fluid" height="630px" width="100%" src ={imageBurger}
+                    <img className="img-fluid" height="580px" width="100%" src ={imageBurger}
                     class = "d-block w-100"
                     alt = "..." />
                     <div class="carousel-caption d-none d-md-block">
@@ -32,7 +32,7 @@ const Banner = () => {
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img className="img-fluid" height="550px" width="100%" src={imageFish} alt="..." />
+                    <img className="img-fluid" height="330px" width="100%" src={imageFish} alt="..." />
                     <div class="carousel-caption d-none d-md-block">
                       <h5 className="text-white fs-2">We Are Enthusiasts of Japanese Cuisine</h5>
                       <p className="text-warning fs-5">Experience the fastest food delivery with healthy food.</p>
