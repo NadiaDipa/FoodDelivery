@@ -42,7 +42,7 @@ const AddServices = () => {
                 <input {...register("img", { required: true, maxLength: 5000 })} placeholder="Enter Your img url" />
                 <input {...register("desc", { required: true, maxLength: 1000 })} placeholder="Enter Your Details" />
                 
-                <input className="submit bg-danger" type="submit" />
+                <input className="submit bg-dark text-danger fw-bold fs-5" type="submit" />
             </form>
         </div>
     );

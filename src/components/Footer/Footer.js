@@ -53,7 +53,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr />
-                <p className="text-center text-danger fs-6 mt-4">&copy; All right reserved | 2021 foodDelivery</p>
+                <p className="text-center text-danger fs-6 mt-4">&copy; All right reserved | 2021 <span className="text-warning">foodDelivery</span></p>
             </footer>
         </div>
     );
