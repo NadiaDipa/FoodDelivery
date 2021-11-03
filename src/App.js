@@ -10,7 +10,9 @@ import ManageOrders from './components/ManageOrders/ManageOrders';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import MyOrders from './components/MyOrders/MyOrders';
 import AddServices from './components/AddServices/AddServices';
+import NotFound from './components/Not Found/NotFound';
 import Footer from './components/Footer/Footer';
+
 
 function App() {
   return (
@@ -45,7 +47,10 @@ function App() {
             </Route>
             <Route path="/add-services">
               <AddServices></AddServices>
-            </Route>
+          </Route>
+          <Route path = "*" >
+              <NotFound></NotFound>
+          </Route>
             
         </Switch>
         <Footer></Footer>
