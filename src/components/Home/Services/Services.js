@@ -22,15 +22,17 @@ const Services = () => {
 
                     key={myservice._id}>
                    <div>
-                    <div class="col">
+                    <div class="col shadow shadow-4">
                         <div class="card h-100 food-item">
                         <img className="img-fluid" src={myservice.img} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title text-danger">{myservice.title}</h5>
-                            <p class="card-text">{myservice.desc}</p>
-                        </div>
-                        <div className="mb-3">
-                           <Link to={`/booking/${myservice._id}`}><button className="btn btn-danger">Order Now</button></Link>
+                        <div className="bg-dark">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning fw-bold fs-5">{myservice.title}</h5>
+                                <p class="card-text text-light">{myservice.desc}</p>
+                            </div>
+                            <div className = "mb-3">
+                                <Link to={`/booking/${myservice._id}`}><button className="btn btn-danger text-white">Order Now</button></Link>
+                            </div>
                         </div>
                         </div>
                     </div>

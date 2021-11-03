@@ -18,19 +18,19 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto d-flex align-items-center">
-                            <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/home">Home</NavLink>
+                            <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/home">Home</NavLink>
                             {
-                                !user.displayName ? (<> <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold" to="/login">Log In</NavLink>
-                                    <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/signup">Sign Up</NavLink>
+                                !user.displayName ? (<> <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold" to="/login">Log In</NavLink>
+                                    <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/signup">Sign Up</NavLink>
                                 </>) : (<>
-                                    <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/manage-orders">Manage Orders</NavLink>
-                                    <NavLink className="ms-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/add-services">Add Services</NavLink>
-                                    <NavLink className="ms-4 me-4 text-decoration-none nav-item text-danger fw-bold header-section" to="/my-orders">My Orders</NavLink>
+                                    <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/manage-orders">Manage Orders</NavLink>
+                                    <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/add-services">Add Services</NavLink>
+                                    <NavLink className="ms-4 me-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/my-orders">My Orders</NavLink>
                                         
 
                                     <NavDropdown title={<img className="user-photo" src={user.photoURL} alt="user" />} id="basic-nav-dropdown">
-                                        <NavDropdown.Item className="nav-login" to="">{user.displayName}</NavDropdown.Item>
-                                        <NavDropdown.Item className="nav-login" to=""><Button variant="danger" onClick={logOut}>Log Out</Button> </NavDropdown.Item>
+                                    <NavDropdown.Item className="nav-login text-dark fw-bold" to="">{user.displayName}</NavDropdown.Item>
+                                            <NavDropdown.Item className="nav-login fs-5" to=""><Button variant="dark" style={{ color: 'orange' , fontSize: 17, fontWeight:"bold"}} onClick={logOut}>Log Out</Button> </NavDropdown.Item>
                                     </NavDropdown>
                                 </>)
                             }

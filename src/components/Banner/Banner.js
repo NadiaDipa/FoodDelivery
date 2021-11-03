@@ -19,7 +19,7 @@ const Banner = () => {
                 alt="..." />
                   <form className="d-flex w-75 mx-auto">
                     <input class="form-control me-2 mx-auto" type="search" placeholder="Discover restuarants that deliver near you..." aria-label="Search" />
-                    <button class="btn btn-dark text-danger fw-bold" type="submit">Search</button>
+                    <button class="btn btn-dark text-warning fw-bold" type="submit">Search</button>
                   </form>
                   </div>
                   <div class="carousel-item">
