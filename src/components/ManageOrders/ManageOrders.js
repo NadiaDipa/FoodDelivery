@@ -96,10 +96,10 @@ const ManageOrders = () => {
 
                             <div className="row mx-auto text-center mb-4 mt-4">
                                     <div className="col-6">
-                                        <button className="btn btn-danger text-dark fs-6 fw-bold border border-2 mb-5" onClick={() => handleDelete(order._id)}>Delete</button>
+                                        <button className="btn btn-danger text-white fs-6 fw-bold border border-2 mb-5" onClick={() => handleDelete(order._id)}>Delete</button>
                                     </div>
                                     <div className = "col-6" >
-                                        <button className="btn btn-warning fw-bold fs-6 border border-2 mb-4" onClick={() => handleUpdate(order._id)}>Confirm</button>
+                                        <button className="btn btn-success fw-bold fs-6 border border-2 mb-4" onClick={() => handleUpdate(order._id)}>Confirm</button>
                                     </div>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button, Container} from 'react-bootstrap';
 import useFirebase from '../../hooks/useFirebase';
 
 const MyOrders = () => {
@@ -14,10 +14,12 @@ const MyOrders = () => {
                 setOrders(uniqueUserOrder);
             });
     }, [email, orders])
-console.log(orders)
+    // console.log(orders)
+
+
     //Remove
     const handleRemove = (id) => {
-        const deleteWarning = window.confirm('Are You sure Delete This Service');
+        const deleteWarning = window.confirm('Are You sure Delete This Service?');
         if (deleteWarning) {
             fetch(`https://obscure-harbor-04873.herokuapp.com/users/${id}`, {
                 method: "DELETE"
@@ -33,15 +35,13 @@ console.log(orders)
                 })
         }
 
-
-
     }
     return (
         <Container className="my-4">
 
-            <h1 className="text-success text-center" style={{ fontFamily: "cursive" }}>My All Orders {orders.length}</h1>
+            <h1 className="text-danger text-center headline mx-auto mb-5">My All Orders: {orders.length}</h1>
 
-            {
+            {/* {
                 orders.map(order => <Row xs={1} md={1} className="g-4 my-4">
                     <Col md={4}>
                         <div>
@@ -54,10 +54,34 @@ console.log(orders)
                         <Button onClick={() => handleRemove(order._id)} variant="danger">Remove</Button>
                     </Col>
                 </Row>)
+
+            } */}
+    
+
+            {
+                orders.map(order => <div className="Card">
+                    <div className = "h-100" >
+                        <img src={order?.order?.img} alt="" className = "img-fluid"/>
+                    </div>
+                    <div class="card-body">
+                        <h2 className="text-danger">{order?.title} </h2>
+                        <p className="text-muted mt-2">Ordered By: {order?.name}</p>
+                        <Button onClick={() => handleRemove(order._id)} variant="danger">Remove</Button>
+                        
+                    </div>
+                </div>)
             }
+                
+
+
+
+              
+               
+            
 
         </Container>
     );
 };
 
 export default MyOrders;
+

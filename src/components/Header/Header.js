@@ -21,7 +21,7 @@ const Header = () => {
                             <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/home">Home</NavLink>
                             {
                                 !user.displayName ? (<> <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold" to="/login">Log In</NavLink>
-                                    <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/signup">Sign Up</NavLink>
+                                    
                                 </>) : (<>
                                     <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/manage-orders">Manage Orders</NavLink>
                                     <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/add-services">Add Services</NavLink>
