@@ -13,7 +13,7 @@ const Services = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center mx-auto text-danger headline mt-5">Popular Food Item</h1>
+                <h1 className="text-center mx-auto text-danger headline mt-5 fs-1">Popular Food Item</h1>
                 <p className="text-dark fs-5 fw-bold">Good Quality Food With Great Service To Our Customer</p>
             </div>
             <div className="container mx-auto row row-cols-1 row-cols-md-3 g-4 mt-2">
@@ -26,7 +26,7 @@ const Services = () => {
                         <div class="card h-100 food-item">
                         <img className="img-fluid" src={myservice.img} class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title">{myservice.title}</h5>
+                            <h5 class="card-title text-danger">{myservice.title}</h5>
                             <p class="card-text">{myservice.desc}</p>
                         </div>
                         <div className="mb-3">
