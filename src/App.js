@@ -10,6 +10,7 @@ import ManageOrders from './components/ManageOrders/ManageOrders';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import MyOrders from './components/MyOrders/MyOrders';
 import AddServices from './components/AddServices/AddServices';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -46,7 +47,8 @@ function App() {
               <AddServices></AddServices>
             </Route>
             
-          </Switch>
+        </Switch>
+        <Footer></Footer>
       </Router>
      
     </div>
