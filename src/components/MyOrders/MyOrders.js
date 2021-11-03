@@ -7,7 +7,7 @@ const MyOrders = () => {
     const { user } = useFirebase();
     const { email } = user;
     useEffect(() => {
-        fetch(`http://localhost:5000/users`)
+        fetch(`https://obscure-harbor-04873.herokuapp.com/users`)
             .then(res => res.json())
             .then(data => {
                 const uniqueUserOrder = data.filter(order => order.email === email)
@@ -63,7 +63,7 @@ const MyOrders = () => {
                     <div className = "h-100" >
                         <img src={order?.order?.img} alt="" className = "img-fluid"/>
                     </div>
-                    <div class="card-body">
+                    <div className="card-body">
                         <h2 className="text-danger">{order?.title} </h2>
                         <p className="text-muted mt-2">Ordered By: {order?.name}</p>
                         <Button onClick={() => handleRemove(order._id)} variant="danger">Remove</Button>

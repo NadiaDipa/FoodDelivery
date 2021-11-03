@@ -9,8 +9,8 @@ import Services from '../Services/Services';
 const Home = () => {
     const { isLoading } = useFirebase();
     if (isLoading) {
-        return  <div class="spinner-border text-danger mt-5 mb-5" role="status">
-                    <span class="visually-hidden">Loading...</span>
+        return  <div className="spinner-border text-danger mt-5 mb-5" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
     }
     return (

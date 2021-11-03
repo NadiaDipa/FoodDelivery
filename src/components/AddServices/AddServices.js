@@ -35,14 +35,14 @@ const AddServices = () => {
             <img className="mt-5" height="390px" src="https://www.goteso.com/products/assets/images/food-delivery-software.png" alt="" />
             <h2 className="text-danger fw-bold text-center headline mx-auto">Catering Order Form</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("title", { required: true, maxLength: 50 })} placeholder="Enter Full Name" />
-                <input {...register("price", { required: true, maxLength: 50 })} placeholder="Enter Food Price" />
+                <input {...register("title", { required: true, maxLength: 50 })} placeholder="Enter Full Name" className="border border-dark"/>
+                <input {...register("price", { required: true, maxLength: 50 })} placeholder="Enter Food Price" className="border border-dark"/>
                
                 
-                <input {...register("img", { required: true, maxLength: 5000 })} placeholder="Enter Your img url" />
-                <input {...register("desc", { required: true, maxLength: 1000 })} placeholder="Enter Your Details" />
+                <input {...register("img", { required: true, maxLength: 5000 })} placeholder="Enter Your img url" className="border border-dark"/>
+                <input {...register("desc", { required: true, maxLength: 1000 })} placeholder="Enter Your Details" className="border border-dark"/>
                 
-                <input className="submit bg-dark text-danger fw-bold fs-5" type="submit" />
+                <input className="submit bg-dark border border-dark text-danger fw-bold fs-5" type="submit" />
             </form>
         </div>
     );

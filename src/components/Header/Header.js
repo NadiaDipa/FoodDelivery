@@ -16,8 +16,13 @@ const Header = () => {
                      <img width="80px" src={logo} alt="" />{" "}
                     <Navbar.Brand className="fs-2 fw-bold text-warning" to="/home">FOOD <span className="text-danger">DELIVERY</span> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto d-flex align-items-center">
+                    <Navbar.Collapse id="basic-navbar-nav" >
+                        <Nav Nav className = "ms-auto d-flex align-items-center"
+                        style = {
+                            {
+                                color: 'white'
+                            }
+                        } >
                             <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold header-section" to="/home">Home</NavLink>
                             {
                                 !user.displayName ? (<> <NavLink className="ms-4 text-decoration-none nav-item text-warning fw-bold" to="/login">Log In</NavLink>

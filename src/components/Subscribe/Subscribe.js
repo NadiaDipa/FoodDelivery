@@ -11,9 +11,9 @@ const Subscribe = () => {
             </div>
             <div className="p-5">
                 <h2 className="fs-1">Subscribe To Our Newsletter</h2>
-                <div class="input-group mb-3 mt-4">
-                    <input type="text" class="form-control" placeholder="Enter Your Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2"  />
-                    <span class="input-group-text" className="bg-danger text-black fw-bolder fs-5 p-3" id="basic-addon2">Subscribe Now</span> <br />
+                <div className="input-group mb-3 mt-4">
+                    <input type="text" className="form-control" placeholder="Enter Your Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2"  />
+                    <span className="input-group-text bg-danger text-black fw-bolder fs-5 p-3" id="basic-addon2">Subscribe Now</span> <br />
                 </div>
             </div>
         </div>

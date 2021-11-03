@@ -11,7 +11,7 @@ const PrivateRoute = ({children,...rest}) => {
         }
         return (
             <Route
-                {...rest}
+                {...rest}style={{color:'white'}}
                 render={({ location }) =>
                     user.displayName ? (children) : <Redirect
                         to={{

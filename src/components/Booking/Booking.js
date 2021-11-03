@@ -42,22 +42,22 @@ const Booking = () => {
                         <p className="px-5">{services.desc}</p>
                     </div> */}
 
-                        {/* <div class="card text-center mt-5" height="150px" width="50%">
-                        <img className="img-fluid" height="250px" src={services?.img} class="card-img-top" alt="..." />
-                        <div class="card-body">
+                        {/* <div className="card text-center mt-5" height="150px" width="50%">
+                        <img className="img-fluid" height="250px" src={services?.img} className="card-img-top" alt="..." />
+                        <div className="card-body">
                             <h4>{services.title}</h4>
-                            <p class="card-text px-5">{services.desc}</p>
+                            <p className="card-text px-5">{services.desc}</p>
                         </div>
                     </div> */}
 
 
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img className="img-fluid image-part" height="250px" width="50px" src={services?.img} class="card-img-top" alt="..." />
-                                    <div class="card-body">
-                                        <h5 class="card-title text-danger">{services.title}</h5>
-                                        <p class="card-text">{services.desc}</p>
+                    <div className="row row-cols-1 row-cols-md-3 g-4">
+                            <div className="col">
+                                <div className="card h-100">
+                                    <img className="img-fluid image-part" height="250px" width="50px" src={services?.img} alt="..." />
+                                    <div className="card-body">
+                                        <h5 className="card-title text-danger">{services.title}</h5>
+                                        <p className="card-text">{services.desc}</p>
                                     </div>
                                 </div>
                             </div>
