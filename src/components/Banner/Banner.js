@@ -17,7 +17,7 @@ const Banner = () => {
                   <img className="img-fluid" height="550px" width="100%" src ={imageFoodDelivery}
                   class = "d-block w-100"
                 alt="..." />
-                  <form class="d-flex">
+                  <form className="d-flex w-75 mx-auto">
                     <input class="form-control me-2 mx-auto" type="search" placeholder="Discover restuarants that deliver near you..." aria-label="Search" />
                     <button class="btn btn-dark text-danger fw-bold" type="submit">Search</button>
                   </form>

@@ -1,8 +1,8 @@
 # Food Delivery Website
 
-Client-Side Link: [Click here to visit the site]()
+Client-Side Link: [Click here to visit the site](https://food-delivery-d3fb9.web.app)
 
-Server Side Link: [Click here to visit the site]()
+Server Side Link: [Click here to visit the site](https://obscure-harbor-04873.herokuapp.com/)
 
 # FoodDelivery Features
 - Developed by React js, React Bootstrap using Firebase Authentication, Very clean and minimal UI based website, Services shows in the card, google login and registration, private route, and Node  Js using for backend server and data from Mongo DB.

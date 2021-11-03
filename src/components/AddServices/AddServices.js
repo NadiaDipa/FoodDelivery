@@ -33,7 +33,7 @@ const AddServices = () => {
     return (
         <div className="form-container">
             <img className="mt-5" height="390px" src="https://www.goteso.com/products/assets/images/food-delivery-software.png" alt="" />
-            <h2 className="text-danger fw-bold text-center">Catering Order Form</h2>
+            <h2 className="text-danger fw-bold text-center headline mx-auto">Catering Order Form</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("title", { required: true, maxLength: 50 })} placeholder="Enter Full Name" />
                 <input {...register("price", { required: true, maxLength: 50 })} placeholder="Enter Food Price" />

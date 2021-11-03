@@ -20,7 +20,7 @@ const ManageOrders = () => {
                  .then(data => {
                      console.log(data)
                      if (data.deletedCount) {
-                         alert('Deleted Successfully')
+                         alert('Deleted Successfully!')
                          const remaining = orders.filter(service => service._id !== id);
                          setOrders(remaining)
                      }
@@ -74,33 +74,34 @@ const ManageOrders = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center mb-5 mt-5 text-danger">Manage All Orders</h1>
+                <h1 className="text-center mb-5 mt-5 text-danger headline mx-auto">Manage All Orders</h1>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 container mx-auto mb-5">
                 {
-                    orders.map(order => <div
+                    orders.map(order => <div 
                         
                         key={order._id}>
-                        <div className="shadow my-5 text-center rounded">
-                            <div>
+                        <div style = {{backgroundColor:"#212529"}}
+                        className = "shadow rounded my-5 text-center rounded" >
+                            <div className="text-danger">
                                 <img className="img-fluid" src={order.img} alt="" />
-                                <h4>{order.title}</h4>
+                                <h4 className="text-warning">{order.title}</h4>
                                 <p>{ order.status}</p>
-                                <h5>Name: {order.name}</h5>
-                                <p>Email: {order.email}</p>
+                                <h5>Name: <span className="text-warning">{order.name}</span></h5>
+                                <h6>Email: <span className="text-warning">{order.email}</span></h6>
                                 <p>{order.location}</p>
                                 <p>{order.date}</p>
                             </div>
-                            <div>
-                                <button className="btn btn-danger mt-2 mb-5" onClick={() => handleDelete(order._id)}>Delete Service</button>
-                            </div>
-                            <div>
-                                <button className="btn btn-danger mt-2 mb-5" onClick={() => handleUpdate(order._id)}>Confirm</button>
-                            </div>
 
-                            {/* <div>
-                                <button className="btn btn-success" onClick={()=> confirmHandler(order._id)}>Confirm</button>
-                            </div> */}
+
+                            <div className="row mx-auto text-center mb-4 mt-4">
+                                    <div className="col-6">
+                                        <button className="btn btn-danger text-dark fs-6 fw-bold border border-2 mb-5" onClick={() => handleDelete(order._id)}>Delete</button>
+                                    </div>
+                                    <div className = "col-6" >
+                                        <button className="btn btn-warning fw-bold fs-6 border border-2 mb-4" onClick={() => handleUpdate(order._id)}>Confirm</button>
+                                    </div>
+                            </div>
                         </div>
                     </div>
                     )

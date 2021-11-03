@@ -63,7 +63,7 @@ console.log(services)
                     </div>
                 </div>
                 <div className="booking-container">
-                    <h2 className="text-center text-danger">Place Your Order</h2>
+                    <h2 className="text-danger headline mx-auto">Place Your Order</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input {...register("name", { required: true, maxLength: 1000 })} value={user.displayName} placeholder="Your Name"/>
                         <input {...register("email", { required: true, maxLength: 1000 } )} value={user.email} placeholder="Your Email"/>
