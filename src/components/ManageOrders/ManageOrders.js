@@ -10,23 +10,29 @@ const ManageOrders = () => {
     })
 
     const handleDelete = id => {
-        const url = `https://obscure-harbor-04873.herokuapp.com/users/${id}/`
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.deletedCount) {
-                    alert('Deleted Successfully')
-                    const remaining = orders.filter(service => service._id !== id);
-                    setOrders(remaining)
-                }
-            })
+        const confirmation = window.confirm('Are You Sure To Delete?')
+        if (confirmation) {
+             const url = `https://obscure-harbor-04873.herokuapp.com/users/${id}/`
+             fetch(url, {
+                     method: 'DELETE'
+                 })
+                 .then(res => res.json())
+                 .then(data => {
+                     console.log(data)
+                     if (data.deletedCount) {
+                         alert('Deleted Successfully')
+                         const remaining = orders.filter(service => service._id !== id);
+                         setOrders(remaining)
+                     }
+                 })
+        }
+       
     }
 
     const handleUpdate = id => {
-        const updatedOrder = orders.status;
+
+        // console.log('button clicked');
+        const updatedOrder = {...orders};
         console.log(updatedOrder)
         updatedOrder.status = "Approved";
 
@@ -45,6 +51,26 @@ const ManageOrders = () => {
                 }
             })
     }
+
+
+
+    // function confirmHandler(id) {
+    //     const updatedOrder = orders;
+    //     updatedOrder.status = 'Approved';
+
+    //     const confirmation = window.confirm('Confirmed!!')
+    //     if (confirmation) {
+    //         fetch(`http://localhost:5000/confirmation/${id}`, {
+    //             method: "put"
+    //         })
+    //             .then(res => res.json())
+    //             .then(data => {
+                
+    //         })
+    //     }
+    // }
+
+
     return (
         <div>
             <div>
@@ -71,6 +97,10 @@ const ManageOrders = () => {
                             <div>
                                 <button className="btn btn-danger mt-2 mb-5" onClick={() => handleUpdate(order._id)}>Confirm</button>
                             </div>
+
+                            {/* <div>
+                                <button className="btn btn-success" onClick={()=> confirmHandler(order._id)}>Confirm</button>
+                            </div> */}
                         </div>
                     </div>
                     )

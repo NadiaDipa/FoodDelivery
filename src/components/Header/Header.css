@@ -11,3 +11,15 @@
 .logout-section{
     background-color: black!important;
 }
+.dropdown-toggle::after{
+    color: white!important;
+}
+.nav-login{
+    /* background-color: cadetblue; */
+    /* margin-left: -30px; */
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -35px;
+   
+}

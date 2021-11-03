@@ -1,19 +1,34 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import './AddServices.css'
 
 const AddServices = () => {
+
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('https://obscure-harbor-04873.herokuapp.com//services', data)
-            .then(res => {
+        const { title, desc, price, img } = data;
+        const newService = { title, desc, price, img }
+        alert('Service Added Successfully Done!!!')
+        reset();
+        fetch('https://obscure-harbor-04873.herokuapp.com/services', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(newService)
+        })
+    
+    // const { register, handleSubmit, reset } = useForm();
+    // const onSubmit = data => {
+    //     axios.post('https://obscure-harbor-04873.herokuapp.com/services', data)
+    //         .then(res => {
                 
-                if(res.data.insertedId){
-                    alert('Added Successfully!');
-                    reset();
-                }
-            })
+    //             if(res.data.insertedId){
+    //                 alert('Added Successfully!');
+    //                 reset();
+    //             }
+            
     };
     return (
         <div className="form-container">
